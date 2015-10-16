@@ -10,7 +10,9 @@
 ``` 
 $ npm install -g node-tinypng
 ```
+
 2. Replace the tinypng.js, settings.json
+
 3. 
 ``` 
 $ tinypng -k I_KC7xGPxXfZPrEbrc-kXWBetAQ3G9rz (change this to your own api, tinypng have limit for 300/month.)
