@@ -5,12 +5,14 @@
 <h4>Notice: this is the folk of TinyPng, this just add feature for support multi level directory.</h4> 
 
 <h2>Installation</h2>
+
+<p>1. </p>
 ``` 
 $ npm install -g node-tinypng
 ```
-
-Replace the tinypng.js, settings.json
-
+<p>2. </p>
+Replace the tinypng.js, settings.json to your global node_modules path.
+<p>3. </p>
 ``` 
 $ tinypng -k I_KC7xGPxXfZPrEbrc-kXWBetAQ3G9rz (change this to your own api, tinypng have limit for 300/month.)
 ```
@@ -37,7 +39,3 @@ Example: tinypng -r image/*
 ## License
 
 MIT © [Nikolay Solovyov](http://ozio.io)
-
-[downloads-image]: http://img.shields.io/npm/dm/node-tinypng.svg
-[npm-url]: https://npmjs.org/package/node-tinypng
-[npm-image]: http://img.shields.io/npm/v/node-tinypng.svg
