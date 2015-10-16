@@ -1,17 +1,18 @@
-# TinyPNG
+<h1>TinyPNG</h1>
 
 [![NPM version][npm-image]][npm-url] [![Downloads][downloads-image]][npm-url]
 
-### Notice: this is the folk of TinyPng, this just add feature for support multi level directory.
+<h4>Notice: this is the folk of TinyPng, this just add feature for support multi level directory.</h4> 
 
-## Installation
+<h2>Installation</h2> 
 
 1.
 ``` 
 $ npm install -g node-tinypng
 ```
 
-2. Replace the tinypng.js, settings.json
+2. 
+Replace the tinypng.js, settings.json
 
 3. 
 ``` 
