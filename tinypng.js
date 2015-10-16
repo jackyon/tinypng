@@ -133,6 +133,23 @@ var filterFiles = function() {
 
         files_io.push(pair);
       }
+    } else {
+      fs.readdir(file,function(err,sub_files){
+        sub_files.forEach(function(f){
+          
+          if ((!options.allow_nonpng && f.slice(-4) === '.png' ) || options.allow_nonpng) {
+            var f_file = file +'/'+ f;
+            var pair = [ f_file, f_file ];
+
+            if(!options.allow_rewrite) {
+              pair[1] = postfixedName(f_file);
+            }
+            files_io.push(pair);
+          }
+
+        })
+      })
+
     }
   }
 
