@@ -2,12 +2,7 @@
 
 [![NPM version][npm-image]][npm-url] [![Downloads][downloads-image]][npm-url]
 
-Compress PNG with TinyPNG API in terminal.
-
-## Installation
-
-    $ npm install -g node-tinypng
-
+### Notice: this is the folk of TinyPng, this just add feature for support multi level directory.
 
 ## Usage
 
