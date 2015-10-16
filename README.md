@@ -4,17 +4,13 @@
 
 <h4>Notice: this is the folk of TinyPng, this just add feature for support multi level directory.</h4> 
 
-<h2>Installation</h2> 
-
-1.
+<h2>Installation</h2>
 ``` 
 $ npm install -g node-tinypng
 ```
 
-2. 
 Replace the tinypng.js, settings.json
 
-3. 
 ``` 
 $ tinypng -k I_KC7xGPxXfZPrEbrc-kXWBetAQ3G9rz (change this to your own api, tinypng have limit for 300/month.)
 ```
