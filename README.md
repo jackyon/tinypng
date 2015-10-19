@@ -1,21 +1,21 @@
 <h1>TinyPNG</h1>
 
-[![NPM version][npm-image]][npm-url] [![Downloads][downloads-image]][npm-url]
 
-<h4>Notice: this is the folk of TinyPng, this just add feature for support multi level directory.</h4> 
+<h4>Using tinypng to batch compress your png images, support multi level directory.</h4>
 
 <h2>Installation</h2>
 
-<p>1. terminal:</p>
+<p>1. Package init:</p>
 ``` 
 $ npm install -g node-tinypng
 ```
 <p>2. Replace the tinypng.js, settings.json to your global node_modules path.</p>
 
-<p>3. terminal:</p>
+<p>3. Change api:</p>
 ``` 
-$ tinypng -k I_KC7xGPxXfZPrEbrc-kXWBetAQ3G9rz (change this to your own api, tinypng have limit for 300/month.)
+$ tinypng -k I_KC7xGPxXfZPrEbrc-kXWBetAQ323rz
 ```
+hint: change the above api to your owns. Get api: https://tinypng.com/developers (free 500 images/month. )
 
 
 ## Usage
@@ -37,5 +37,4 @@ Example: tinypng -r image/*
 
 
 ## License
-
-MIT © [Nikolay Solovyov](http://ozio.io)
+this is the folk from https://github.com/ozio/tinypng, this folk just add the feature to support multi level directory.
