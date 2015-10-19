@@ -120,41 +120,59 @@ var parseArgvs = function() {
  *
  * @returns {object}
  */
-var filterFiles = function() {
-  for(var i = 0, l = files.length; i < l; i++) {
-    var file = files[i];
-    if(fs.existsSync(file) && fs.statSync(file).isFile()) {
-      if ((!options.allow_nonpng && file.slice(-4) === '.png' ) || options.allow_nonpng) {
-        var pair = [ file, file ];
-
-        if(!options.allow_rewrite) {
-          pair[1] = postfixedName(file);
-        }
-
-        files_io.push(pair);
-      }
-    } else {
-      fs.readdir(file,function(err,sub_files){
-        sub_files.forEach(function(f){
-          
-          if ((!options.allow_nonpng && f.slice(-4) === '.png' ) || options.allow_nonpng) {
-            var f_file = file +'/'+ f;
-            var pair = [ f_file, f_file ];
-
-            if(!options.allow_rewrite) {
-              pair[1] = postfixedName(f_file);
+function scanFolders(paths){
+    var fileList = [],
+        walk = function(path, fileList){
+            if (fs.statSync(path).isDirectory()) {
+                files = fs.readdirSync(path);
+                files.forEach(function(item) {
+                    var tmpPath = path + '/' + item,
+                        stats = fs.statSync(tmpPath);
+    
+                    if (stats.isDirectory()) {
+                        walk(tmpPath, fileList); 
+                    } else {
+                        var node = filter(tmpPath);
+                        if (node != undefined) {
+                          //console.log('tt');
+                          fileList.push(node);
+                        } 
+                    }  
+                });  
+            } else {
+                var node = filter(path);
+                if (node != undefined) {
+                  fileList.push(node);
+                }
+                //console.log(typeof(node));
             }
-            files_io.push(pair);
-          }
+        };
+        
+        filter = function(path){
+            if ((!options.allow_nonpng && path.slice(-4) === '.png' ) || options.allow_nonpng) {
+              var pair = [ path, path ];
+              if(!options.allow_rewrite) {
+                pair[1] = postfixedName(path);
+              }
+              return pair;
+            } else {
+              return undefined;
+            }
+        }
+    
+    paths.forEach(function(path) {
+        walk(path, fileList);
+    })
 
-        })
-      })
+    return fileList;
+}
 
-    }
-  }
 
-  return files_io;
+var filterFiles = function() {
+  files_io = scanFolders(files);
 };
+
+
 
 /**
  * Adds postfix to filename

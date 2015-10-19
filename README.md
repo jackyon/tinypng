@@ -6,13 +6,13 @@
 
 <h2>Installation</h2>
 
-<p>1. </p>
+<p>1. terminal:</p>
 ``` 
 $ npm install -g node-tinypng
 ```
-<p>2. </p>
-Replace the tinypng.js, settings.json to your global node_modules path.
-<p>3. </p>
+<p>2. Replace the tinypng.js, settings.json to your global node_modules path.</p>
+
+<p>3. terminal:</p>
 ``` 
 $ tinypng -k I_KC7xGPxXfZPrEbrc-kXWBetAQ3G9rz (change this to your own api, tinypng have limit for 300/month.)
 ```
