@@ -1,17 +1,16 @@
 <h1>TinyPNG</h1>
 
 
-<h4>Using tinypng to batch compress your png images, support multi level directory.</h4>
+<h4>Batch compress PNG with TinyPNG API in terminal. Support multi level directory.</h4>
 
 <h2>Installation</h2>
 
 <p>1. Package init:</p>
 ``` 
-$ npm install -g node-tinypng
+$ npm install tinypng-tool
 ```
-<p>2. Replace the tinypng.js, settings.json to your global node_modules path.</p>
 
-<p>3. Change api:</p>
+<p>2. Change api:</p>
 ``` 
 $ tinypng -k I_KC7xGPxXfZPrEbrc-kXWBetAQ323rz
 ```
@@ -31,7 +30,7 @@ Usage: tinypng [options] [image.png|*.png]
 ```
 
 ```
-Example: tinypng -r image/*
+Example: tinypng -r image/
 
 ```
 

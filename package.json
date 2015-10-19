@@ -1,11 +1,11 @@
 {
-  "name": "node-tinypng",
-  "version": "0.0.4",
-  "description": "Compress PNG with TinyPNG API in terminal.",
+  "name": "tinypng-tool",
+  "version": "0.0.6",
+  "description": "Batch compress PNG with TinyPNG API in terminal. Support multi level directory.",
   "author": {
-    "name": "mr.ozio",
-    "email": "i@mr-ozio.ru",
-    "url": "http://mr-ozio.ru"
+    "name": "jackyon",
+    "email": "jackyon.com@gmail.com",
+    "url": "http://www.findjo.com"
   },
   "main": "tinypng.js",
   "preferGlobal": "true",
@@ -17,7 +17,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/ozio/tinypng.git"
+    "url": "https://github.com/jackyon/tinypng"
   },
-  "keywords": ["png", "compress", "image", "tinypng", "node"]
+  "keywords": ["png", "compress", "image", "tinypng", "node", "webpack"]
 }
