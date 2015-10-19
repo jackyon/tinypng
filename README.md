@@ -4,14 +4,13 @@
 <h4>Batch compress PNG with TinyPNG API in terminal. Support multi level directory.</h4>
 
 <h2>Installation</h2>
-
-<p>1. Package init:</p>
 ``` 
+1. Package init:
 $ npm install tinypng-tool
 ```
 
-<p>2. Change api:</p>
 ``` 
+2. Change api:
 $ tinypng -k I_KC7xGPxXfZPrEbrc-kXWBetAQ323rz
 ```
 hint: change the above api to your owns. Get api: https://tinypng.com/developers (free 500 images/month. )
